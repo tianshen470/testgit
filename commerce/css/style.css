@@ -1,6 +1,9 @@
 a {
     text-decoration: none !important;
 }
+button {
+    outline: none;
+}
 .page-top {
     position: relative;
     background: rgba(255, 255, 255, 0.9);
@@ -11,7 +14,6 @@ a {
     top: 0;
     width: 100%;
     z-index: 99;
-    background: rgba(255, 255, 255, 0.9);
 }
 .toggle-menu {
     position: absolute;
@@ -38,18 +40,21 @@ a {
     width: 105px;
     line-height: 104px;
     text-align: center;
-    cursor: pointer;
     position: relative;
     font-size: 16px;
-    padding: 0 15px;
 }
 .menu-item > a {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 70px;
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    color: #e61e21;
+    cursor: pointer;
+}
+.menu-item.no-dmenu > a {
+    height: 104px;
 }
 .dmenu-item > a:hover,
 .menu-item > a:hover {
@@ -71,6 +76,9 @@ a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
+}
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.9);
 }
 .menu-item:hover .dmenu {
     display: block;
@@ -115,6 +123,7 @@ a {
 }
 .nav-box .page-con {
     position: relative;
+    overflow: initial;
 }
 .ptitle .breadcrumb {
     border-radius: 0;
@@ -338,6 +347,7 @@ a {
 }
 
 .pi-owl {
+    position: relative;
     width: 520px;
     float: left;
 }
@@ -427,16 +437,42 @@ a {
     width: 100%;
     text-align: center;
 }
+.pi-owl .owl-dots {
+    width: auto;
+    z-index: 20;
+    left: auto;
+    right: 15px;
+    bottom: 15px;
+}
 .owl-dots span {
     display: block;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background: #aaa;
+    width: 30px;
+    height: 5px;
+    background: #fff;
     margin: 0 5px;
+}
+.pi-owl .owl-dots span {
+    width: 15px;
+    height: 15px;
 }
 .owl-dots .active span {
     background: #ec0027;
+}
+.img-msg-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    line-height: 30px;
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0,0,0,.6);
 }
 
 .menub-title {
